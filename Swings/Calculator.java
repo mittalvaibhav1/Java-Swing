@@ -6,9 +6,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Swing2 extends JFrame implements ActionListener{
+public class Calculator extends JFrame implements ActionListener{
 	JTextField textField1;
-	Swing2() {
+	Calculator() {
 		//Enter the Value Label
 		super("Calculator");
 		JLabel label1 = new JLabel("Enter The Value:");
@@ -124,7 +124,7 @@ public class Swing2 extends JFrame implements ActionListener{
 		setVisible(true);
 	}
 	public static void main(String[] args) {
-		new Swing2();
+		new Calculator();
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
