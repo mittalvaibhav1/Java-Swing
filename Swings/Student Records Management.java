@@ -127,6 +127,24 @@ public class StudentManager extends JFrame implements ActionListener {
 				}
 			}
 		}
+		else if(txt.equals("Sort")) {
+			try {
+				String sel = btnGrp1.getSelection().getActionCommand(); 
+				if(sel.equals("Roll Number")) {
+					Collections.sort(students,new sortByRollNumber());
+				}
+				else if(sel.equals("Marks")) {
+					Collections.sort(students,new sortByMarks());
+				}
+				else {
+					Collections.sort(students,new sortByName());
+				}
+				JOptionPane.showMessageDialog(this,"Records sorted by " + sel ,"Alert",JOptionPane.INFORMATION_MESSAGE);
+			}
+			catch(Exception ex) {
+				JOptionPane.showMessageDialog(this,"Please Select a Parameter you want to Sort By.","Alert",JOptionPane.ERROR_MESSAGE);
+			}
+		}
 		
 	}
 
