@@ -145,6 +145,13 @@ public class StudentManager extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(this,"Please Select a Parameter you want to Sort By.","Alert",JOptionPane.ERROR_MESSAGE);
 			}
 		}
+		else {
+			String res = "";
+			for(Student s : students) {
+				res+= s.toString() + "\n";
+			}
+			JOptionPane.showMessageDialog(this,res,"Results",JOptionPane.INFORMATION_MESSAGE);
+		}
 		
 	}
 
