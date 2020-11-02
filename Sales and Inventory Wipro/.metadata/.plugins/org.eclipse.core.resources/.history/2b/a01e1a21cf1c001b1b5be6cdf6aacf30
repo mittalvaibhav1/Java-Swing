@@ -1,0 +1,10 @@
+package com.wipro.sales.dao;
+
+public class StockDao {
+	public insertStock(Stock sales) {
+		
+	}
+	public generateProductID(String productName) {
+		
+	}
+}

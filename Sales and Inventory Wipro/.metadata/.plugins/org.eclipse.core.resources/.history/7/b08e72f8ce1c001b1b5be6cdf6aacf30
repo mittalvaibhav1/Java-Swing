@@ -1,0 +1,13 @@
+package com.wipro.sales.dao;
+
+public class SalesDao {
+	public int insertSales(Sales sales) {
+		
+	}
+	public String generateSalesID(java.util.Date salesDate) {
+		
+	}
+	public ArrayList<SalesReport> getSalesReport() {
+		
+	}
+}
