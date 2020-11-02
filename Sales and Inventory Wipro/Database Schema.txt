@@ -1,0 +1,18 @@
+-- STOCK TABLE
+CREATE TABLE TBL_STOCK(
+ Product_ID varchar(6) PRIMARY KEY,
+ Product_Name varchar(20) UNIQUE,
+ Quantity_On_Hand number CHECK(Quantity_On_Hand >= 0),
+ Product_Unit_Price number CHECK(Product_Unit_Price >= 0),
+ Reorder_Level number CHECK(Reorder_Level >= 0)
+)
+-- SALES TABLE 
+CREATE TABLE TBL_SALES(
+ Sales_ID varchar(6) PRIMARY KEY,
+ Sales_Date Date,
+ Product_ID varchar(6) REFERENCES TBL_STOCK(Product_ID),
+ Quantity_Sold number CHECK(Quantity_Sold >= 0),
+ Sale_Price_Per_Unit number CHECK(Sale_Price_Per_Unit >= 0)
+)
+
+ 
